@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">   
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAFE Travel Solutions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7fa;
+      margin: 0;
+      padding: 0;
+      color: #1b2a41;
+    }
+    header {
+      background: linear-gradient(135deg, #004d61, #007ea7);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    #quote-banner {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .section {
+      background: #ffffff;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-left: 5px solid #007ea7;
+    }
+    .section h2 {
+      margin-top: 0;
+      color: #005f73;
+      font-size: 1.25rem;
+    }
+    .section ul {
+      padding-left: 1.2rem;
+    }
+    .section ul li {
+      margin-bottom: 0.5rem;
+    }
+    .contact-info {
+      background: #ffffff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-left: 5px solid #004d61;
+      margin-bottom: 0.5rem;
+    }
+    .contact-info h2 {
+      margin-top: 0;
+      color: #007ea7;
+      font-size: 1.25rem;
+    }
+    .contact-info a {
+      color: #00334e;
+      text-decoration: none;
+    }
+    .inspiration-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #1b2a41;
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #004d61;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .section h2, .contact-info h2 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SAFE Travel Solutions</h1>
+    <p id="quote-banner">Loading inspiring quote...</p>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>Hotels</h2>
+      <p>Find unbeatable rates on hotel rooms in destinations all around the world. Whether you're looking for luxury or budget stays, we've got you covered.</p>
+      <ul>
+        <li>Up to 25% off resort & vacation rentals</li>
+        <li>Up to 25% off 500 Extra Holidays Resorts throughout USA, Mexico and more</li>
+        <li>Up to 15% on most hotel brands including Wyndham Collection, Choice, Comfort, Radisson, Best Western including BW Plus, Premier & Signature collections</li>
+        <li><strong>Contact us</strong> for the entire list</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Car Rentals</h2>
+      <p>Discover affordable and convenient car rental options to suit all your travel needs. Drive with freedom and flexibility wherever you go.</p>
+      <ul>
+        <li>Avis - 35% off</li>
+        <li>Budget - 35% off</li>
+        <li>Up to 30% off select car rentals</li>
+        <li>Budget Truck Rental - 10–20% off</li>
+        <li><strong>Contact us</strong> for more exclusive deals!</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Flight & Travel Packages</h2>
+      <p>Book all-in-one travel packages that include flights, hotels, and activities. Perfect for hassle-free planning and maximum value.</p>
+      <ul>
+        <li>$65–$200 off Round Trip British Airways</li>
+        <li>Up to $200 off group tours – Explorations by Collette</li>
+        <li>Up to $100 off guided vacations – Grand European Travel</li>
+        <li>More coming soon!</li>
+      </ul>
+    </div>
+
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:support@safetravelsolutions.com">support@safetravelsolutions.com</a></p>
+      <p>Phone: <a href="tel:+18005551234">1-800-555-1234</a></p>
+      <p>Follow us on social media:</p>
+      <p>
+        <a href="#">Facebook</a> | 
+        <a href="#">Twitter</a> | 
+        <a href="#">Instagram</a>
+      </p>
+    </div>
+      </div>
+
+  <footer>
+    <p>&copy; 2025 SAFE Travel Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const quotes = [
+      "Travel is the only thing you buy that makes you richer.",
+      "Life is short and the world is wide.",
+      "The journey not the arrival matters.",
+      "To travel is to live.",
+      "Wherever you go, go with all your heart.",
+      "Travel far enough, you meet yourself.",
+      "Take only memories, leave only footprints.",
+      "Adventure may hurt you but monotony will kill you.",
+      "Travel makes one modest. You see what a tiny place you occupy in the world.",
+      "Don’t listen to what they say. Go see."
+    ];
+
+    function rotateQuotes() {
+      const quoteEl = document.getElementById('quote-banner');
+      let index = 0;
+      quoteEl.textContent = quotes[index];
+      setInterval(() => {
+        index = (index + 1) % quotes.length;
+        quoteEl.textContent = quotes[index];
+      }, 4000);
+    }
+
+    document.addEventListener('DOMContentLoaded', rotateQuotes);
+  </script>
+
+</body>
+</html>
