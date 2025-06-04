@@ -149,32 +149,75 @@
     <p>&copy; 2025 SAFE Travel Solutions. All rights reserved.</p>
   </footer>
 
-  <script>
-    const quotes = [
-      "Travel is the only thing you buy that makes you richer.",
-      "Life is short and the world is wide.",
-      "The journey not the arrival matters.",
-      "To travel is to live.",
-      "Wherever you go, go with all your heart.",
-      "Travel far enough, you meet yourself.",
-      "Take only memories, leave only footprints.",
-      "Adventure may hurt you but monotony will kill you.",
-      "Travel makes one modest. You see what a tiny place you occupy in the world.",
-      "Don’t listen to what they say. Go see."
-    ];
+<script>
+  const quotes = [
+    "Travel is the only thing you buy that makes you richer.",
+    "Life is short and the world is wide.",
+    "The journey not the arrival matters.",
+    "To travel is to live.",
+    "Wherever you go, go with all your heart.",
+    "Travel far enough, you meet yourself.",
+    "Take only memories, leave only footprints.",
+    "Adventure may hurt you but monotony will kill you.",
+    "Travel makes one modest. You see what a tiny place you occupy in the world.",
+    "Don’t listen to what they say. Go see.",
+    "Wanderlust: a desire to travel, to understand one’s very existence.",
+    "Jobs fill your pocket, but adventures fill your soul.",
+    "The world is a book and those who do not travel read only one page.",
+    "Collect moments, not things.",
+    "Go where you feel most alive.",
+    "Not all those who wander are lost.",
+    "To awaken alone in a strange town is one of the most pleasant sensations in the world.",
+    "A journey is best measured in friends, not in miles.",
+    "Blessed are the curious for they shall have adventures.",
+    "The gladdest moment in human life is a departure into unknown lands.",
+    "Live your life by a compass, not a clock.",
+    "Travel isn’t always pretty. It isn’t always comfortable. But that’s okay.",
+    "If we were meant to stay in one place, we’d have roots instead of feet.",
+    "Travel opens your heart, broadens your mind, and fills your life with stories to tell.",
+    "Wherever you go becomes a part of you somehow.",
+    "Travel brings power and love back into your life.",
+    "Fill your life with experiences, not things. Have stories to tell, not stuff to show.",
+    "If you think adventure is dangerous, try routine; it’s lethal.",
+    "Life begins at the end of your comfort zone.",
+    "Escape the ordinary.",
+    "The biggest adventure you can take is to live the life of your dreams.",
+    "Once a year, go someplace you’ve never been before.",
+    "A good traveler has no fixed plans, and is not intent on arriving.",
+    "Travel teaches toleration.",
+    "It feels good to be lost in the right direction.",
+    "You don’t have to be rich to travel well.",
+    "The best view comes after the hardest climb.",
+    "Travel is rebellion in its purest form.",
+    "To travel is to discover that everyone is wrong about other countries.",
+    "Travel: the best way to be lost and found at the same time.",
+    "Every exit is an entry somewhere else.",
+    "The impulse to travel is one of the hopeful symptoms of life.",
+    "Let’s find some beautiful place to get lost."
+  ];
 
-    function rotateQuotes() {
-      const quoteEl = document.getElementById('quote-banner');
-      let index = 0;
-      quoteEl.textContent = quotes[index];
-      setInterval(() => {
-        index = (index + 1) % quotes.length;
-        quoteEl.textContent = quotes[index];
-      }, 4000);
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
+  }
 
-    document.addEventListener('DOMContentLoaded', rotateQuotes);
-  </script>
+  function rotateQuotes() {
+    const quoteEl = document.getElementById('quote-banner');
+    const shuffledQuotes = shuffleArray([...quotes]);
+    let index = Math.floor(Math.random() * shuffledQuotes.length);
+
+    quoteEl.textContent = shuffledQuotes[index];
+    setInterval(() => {
+      index = (index + 1) % shuffledQuotes.length;
+      quoteEl.textContent = shuffledQuotes[index];
+    }, 4000);
+  }
+
+  document.addEventListener('DOMContentLoaded', rotateQuotes);
+</script>
 
 </body>
 </html>
